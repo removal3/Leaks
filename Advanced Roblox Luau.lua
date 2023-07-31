@@ -42,13 +42,12 @@ local CoreGui = game:GetService'CoreGui' or Players.LocalPlayer.CoreGui
 local UserInputService = game:GetService'UserInputService'
 local V0 = Vector3.zero
 
-local function WaitForChildOfClass(parent, className)
-    local child = parent:FindFirstChildOfClass(className)
-    if child then return child end
-
-    return parent.ChildAdded:Wait(function(newChild)
-        return newChild:IsA(className)
-    end)
+local function WaitForChildOfClass(parent, class)
+    local child = parent:FindFirstChildOfClass(class)
+    while not child or child.ClassName ~= class do
+        child = parent.ChildAdded:Wait()
+    end
+    return child
 end
 
 if not gethui then
