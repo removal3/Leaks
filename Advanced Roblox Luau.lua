@@ -18,7 +18,7 @@ queueteleport(<string> code)
 WaitForChildOfClass(<Instance> object, <ClassName> string)
 gethui(<void>) returns to a folder in RobloxGui (CoreGui.RobloxGui)
 -------------------------------
-loadstring(game:HttpGet'https://raw.githubusercontent.com/removal3/Leaks/main/Advanced%20Roblox%20LuaU.lua')()
+loadstring(game:HttpGet'https://raw.githubusercontent.com/removal3/Leaks/main/Advanced%20Roblox%20Luau.lua')()
 ]]
 
 repeat task.wait() until game:GetService'Players'.LocalPlayer
