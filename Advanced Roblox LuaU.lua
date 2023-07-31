@@ -1,3 +1,26 @@
+--[[
+Useful services are defined:
+Lighting
+SoundService
+Stats
+RunService
+ReplicatedStorage
+Players
+CoreGui
+UserInputService
+-------------------------------
+Please refer to most functions at https://docs.synapse.to/development/script_env.html
+Functions:
+clipboard(<String> Text)
+isnetworkowner(<Instance> Object)
+request(<table> options) https://docs.synapse.to/reference/syn_lib.html?highlight=syn.request#request
+queueteleport(<string> code)
+WaitForChildOfClass(<Instance> object, <ClassName> string)
+gethui(<void>) returns to a folder in RobloxGui (CoreGui.RobloxGui)
+-------------------------------
+loadstring(game:HttpGet'https://raw.githubusercontent.com/removal3/Leaks/main/Advanced%20Roblox%20LuaU.lua')()
+]]
+
 repeat task.wait() until game:GetService'Players'.LocalPlayer
 
 local request = (syn and syn.request) or (http and http.request) or http_request or (fluxus and fluxus.request) or request
